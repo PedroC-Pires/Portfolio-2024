@@ -1,0 +1,34 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  color: white;
+  mix-blend-mode: difference;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+.s1 {
+  background: url(./img/bgtest.png);
+  background-size: cover;
+}
