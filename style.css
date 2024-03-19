@@ -3,11 +3,6 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h1 {
-  color: white;
-  mix-blend-mode: difference;
-}
-
 html {
   height: 100%;
 }
@@ -31,4 +26,44 @@ section {
 .s1 {
   background: url(./img/bgtest.png);
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.s1h1 {
+  color: white;
+  mix-blend-mode: difference;
+  font-size: 6rem;
+  text-align: center;
+  animation-name: lttrspc;
+  letter-spacing: 1.5rem;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+}
+
+.s1div1 {
+  margin: auto;
+  width: 600px;
+  height: 300px;
+}
+
+@keyframes lttrspc {
+  from {
+    letter-spacing: 4rem;
+  }
+
+  to {
+    letter-spacing: 1.5rem;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    position: relative;
+    top: -2rem;
+  }
+
+  to {
+    position: relative;
+    top: 0rem;
+  }
 }
