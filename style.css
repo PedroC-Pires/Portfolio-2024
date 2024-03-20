@@ -1,69 +1,82 @@
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-html {
-  height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
 }
 
 body {
-  margin: 0;
-  height: 100%;
+    margin: 0;
+    overflow-y: hidden;
 }
 
 main {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    display: block;
 }
 
 section {
-  height: 100vh;
-  flex-shrink: 0;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+section > * {
+    flex-shrink: 0;
 }
 
 .s1 {
-  background: url(./img/bgtest.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-image: url(./img/bgtest.png);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+}
+.s1 h1 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 7vw;
+    letter-spacing: 2vw;
+    animation: lttrspc 2s ease-out;
+}
+.s1 hr {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    width: 70vw;
+    border: solid white 1px;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+}
+.s1 div {
+    width: 65vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.s1 div div {
+    color: white;
+    mix-blend-mode: difference;
+    flex: 1 0 200px;
+    display: flex;
+    flex-direction: column;
 }
 
-.s1h1 {
-  color: white;
-  mix-blend-mode: difference;
-  font-size: 6rem;
-  text-align: center;
-  animation-name: lttrspc;
-  letter-spacing: 1.5rem;
-  animation-duration: 4s;
-  animation-timing-function: ease-out;
+.s1 div div h2 {
+    margin-top: 0;
+    margin-bottom: -2vw;
+    font-size: 2vw;
+    animation: slidedown 1s ease-out;
 }
-
-.s1div1 {
-  margin: auto;
-  width: 600px;
-  height: 300px;
+.s1 div div h3 {
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    font-size: 1.5vw;
+    animation: slidedown 1s ease-out;
 }
-
-@keyframes lttrspc {
-  from {
-    letter-spacing: 4rem;
-  }
-
-  to {
-    letter-spacing: 1.5rem;
-  }
-}
-
-@keyframes slidedown {
-  from {
-    position: relative;
-    top: -2rem;
-  }
-
-  to {
-    position: relative;
-    top: 0rem;
-  }
+.s1 div div ul {
+    margin: 0;
+    animation: slidedown 1s ease-out;
 }
